@@ -27,7 +27,7 @@ Autonomous AI agents increasingly operate with real authority: spending money, s
 
 A system with no governance layer can take any action the API permits. A constitutionally governed system has hard constraints, economic gates, and behavioral prohibitions enforced in code — not in system prompts that can be overridden by adversarial injection.
 
-This framework was developed by CTE from 95+ days operating a 52-agent autonomous organization under continuous constitutional governance, with 64 ratified amendments and a formally documented P0 incident record. The assessors have experienced governance failure in production. The questions are informed by those failures.
+This framework was developed by CTE from 98 days operating a 56-agent autonomous organization under continuous constitutional governance, with 64 ratified amendments and a formally documented P0 incident record. The assessors have experienced governance failure in production. The questions are informed by those failures.
 
 **Section 28.5.2 (VRI), Section 30.6.2 (environment shaping), Section 30.6.3 (narrative testing)** — all cite the HRAO-E constitutional architecture that generated the framework.
 
@@ -160,7 +160,7 @@ Organizations that want an independent assessment can engage CTE directly:
 
 Tier 2 is the recommended starting point. It includes a structured 2-hour session with your AI team, a completed scorecard across all six layers, a risk matrix with blast radius estimates, and a remediation roadmap.
 
-**Why engage CTE vs. a traditional security firm?** Traditional firms test the perimeter. CTE tests what's behind it — because we operate behind it. CTE is a Level 4+ autonomous organization: 52 agents, 64 ratified amendments, P0 incident post-mortems, production-validated constitutional governance. The assessors have experienced what breaks in practice. The questions are informed by those breaks.
+**Why engage CTE vs. a traditional security firm?** Traditional firms test the perimeter. CTE tests what's behind it — because we operate behind it. CTE is a Level 4+ autonomous organization: 56 registered agents, 64 ratified amendments, P0 incident post-mortems, production-validated constitutional governance. The assessors have experienced what breaks in practice. The questions are informed by those breaks.
 
 ---
 
