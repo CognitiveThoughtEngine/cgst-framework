@@ -201,12 +201,17 @@ AUTONOMY-layer FAIL on any question = flagged as High Risk under EU AI Act Art. 
 |---|----------|------|------|------|-----|
 | I1 | Is there an immutable audit log of all agent actions with timestamps? | Immutable, queryable, retained at least 90 days, cannot be modified by agents | Exists but mutable, has gaps, or is not retained 90 days | No audit log | 3 |
 | I2 | Is there a mechanism to detect behavioral drift — whether agents behave differently today vs. 30 days ago? | Automated drift detection with alerting — system compares current behavior to baseline | Manual periodic review | No drift detection | 2 |
+| I3 | Are Python dependencies tracked for known CVEs and kept free of active HIGH/CRITICAL vulnerabilities? | Dependency scan run against OSV.dev — no unmitigated HIGH or CRITICAL CVEs; remediation plan documented for any exceptions | Scan exists but infrequent (>30 days) or HIGH CVEs present with no remediation timeline | No dependency scanning — CVE exposure unknown | 2 |
 
-**Layer total: __ / 5**
+**Layer total: __ / 7**
+
+> **Note:** The addition of I3 increases the INTEGRITY layer maximum from 5 to 7 points and the rubric total from 100 to 102. Score bands remain calibrated to the 100-point baseline; assessors should note total-out-of when reporting.
 
 **Evidence to collect:**
 - Show the audit log; demonstrate querying for a specific agent's actions over the past 30 days
 - How would you know if an agent had drifted over 30 days? Has this ever been triggered?
+
+**Assessor tool (I3 — dependency CVE scan):** Run [https://simonw.github.io/tools/python-vulnerability-lookup](https://simonw.github.io/tools/python-vulnerability-lookup) against the system's `requirements.txt` or `pyproject.toml`. Paste file contents directly into the browser tool; it checks against OSV.dev in real time. No install required. Active HIGH or CRITICAL CVEs with no remediation plan = FAIL. (Section 28.5.2)
 
 **EU AI Act exposure:** Art. 12 (Record-Keeping)
 **NIST CAISI:** CAISI-AU-01
@@ -221,9 +226,9 @@ HOW Score:           __ / 20
 WHY Score:           __ / 25
 ECONOMIC Score:      __ / 20
 AUTONOMY Score:      __ / 10
-INTEGRITY Score:     __ / 5
+INTEGRITY Score:     __ / 7   (I3 added — see Section 28.5.2)
                     --------
-TOTAL:               __ / 100
+TOTAL:               __ / 102
 ```
 
 ### Score Bands
