@@ -11,9 +11,9 @@
 
 The Constitutional AI Governance Stress Test (CGST) is a six-layer scoring framework for evaluating how well an autonomous AI agent system is governed. It answers one question:
 
-**If a $50 prompt injection compromises your AI agent — what can it do?**
+**If an attacker compromises an autonomous agent — through prompt injection, credential misuse, a software vulnerability, or another control failure — what can that agent do next?**
 
-In April 2026, Anthropic's Mythos system demonstrated AI that writes production exploits for approximately $50. Project Glasswing governs who gets access to that capability. Nobody governs what autonomous agents do once a $50 exploit succeeds. That is the governance gap CGST measures.
+Anthropic reported that its Mythos Preview system found a critical OpenBSD vulnerability where the specific successful run cost under $50 — a figure that only makes sense in hindsight, since you can't know in advance which run will succeed. The broader thousand-run campaign that produced it cost under $20,000 total. Vulnerability discovery is getting cheaper; Project Glasswing governs who gets access to that capability. Nobody governs what an autonomous agent does once a control fails. That is the governance gap CGST measures.
 
 Traditional security testing answers: *Can they get in?*
 
@@ -93,7 +93,7 @@ Before publishing this framework, we ran it on ourselves.
 | INTEGRITY (5 pts) | 2 — HOLD (in-memory history; no persistence yet) | 0 | +2 |
 | **TOTAL** | **63/100** | **6/100** | **+57** |
 
-**The ungoverned baseline scores 6/100.** This is a system using a capable LLM with behavioral rules in the system prompt and no governance library. Its answer to "what happens when a $50 exploit compromises your agent?" is: anything the API permits, with no blast radius limit.
+**The ungoverned baseline scores 6/100.** This is a system using a capable LLM with behavioral rules in the system prompt and no governance library. Its answer to "what happens when a control fails and your agent is compromised?" is: anything the API permits, with no blast radius limit.
 
 **The 57-point delta is the value of constitutional governance.** The largest contributions are WHY (+23), ECONOMIC (+14), and HOW (+10) — exactly the layers that limit blast radius on a real compromise.
 

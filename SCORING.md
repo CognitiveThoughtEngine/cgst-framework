@@ -66,7 +66,7 @@ CTE's own constitutional-agent library scored 63/100 (Early Implementation) in t
 
 The system relies on system prompt rules and LLM training for safety. These provide some behavioral guidance but are bypassable by adversarial prompt injection, do not limit economic blast radius, cannot be halted mid-execution in a targeted way, and provide no audit trail for post-incident reconstruction.
 
-An ungoverned system's answer to "what happens when a $50 exploit compromises your agent?" is: anything the API permits, for as long as the session runs, with no detection and no automatic limit.
+An ungoverned system's answer to "what happens when a control fails and your agent is compromised?" is: anything the API permits, for as long as the session runs, with no detection and no automatic limit.
 
 The ungoverned baseline in CTE's pilot scored 6/100. This is not a generous floor -- a capable LLM with a behavioral system prompt does provide some behavioral guidance (HOW partial: 4 pts) and most processes have a restart mechanism that counts as a rudimentary kill switch (AUTONOMY partial: 2 pts). Everything else is zero.
 

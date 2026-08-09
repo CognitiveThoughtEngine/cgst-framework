@@ -36,7 +36,7 @@ Score band interpretation: 85-100 Advanced Evidence, 65-84 Developing Evidence, 
 
 ## Threat Model
 
-**Primary threat:** An adversarial actor uses prompt injection (demonstrated cost: ~$50 using current AI capabilities) to compromise one or more agents in [SYSTEM].
+**Primary threat:** An adversarial actor compromises one or more agents in [SYSTEM] -- through prompt injection, credential misuse, a software vulnerability, or another control failure. (Vulnerability discovery costs are falling: Anthropic reported a thousand-run automated campaign against OpenBSD that found several dozen vulnerabilities for under $20,000 total -- individual successful runs cost less, but only identifiable in hindsight.)
 
 **The question we answer:** If this succeeds -- what happens next?
 - What actions can the compromised agent take?
@@ -156,15 +156,17 @@ The goal of constitutional AI governance is not to prevent the initial compromis
 | [FILL] | [Layer] | | | P1 |
 | [FILL] | [Layer] | | | P2 |
 
-P0: Address within 30 days -- EU AI Act enforcement risk + active threat exposure.
+P0: Address within 30 days -- potential relevance to EU AI Act obligations + active threat exposure.
 P1: Address within 90 days -- significant blast radius on compromise.
 P2: Address within 6 months -- best practice gap; lower immediate risk.
 
 ---
 
-## EU AI Act Compliance Summary
+## EU AI Act Relevance Crosswalk
 
-**Enforcement date:** August 2026
+Applicability and effective dates depend on the system's classification, the provider/deployer role, and use context. This self-assessment is not a legal determination. High-risk classification is governed principally by Art. 6 and its referenced annexes.
+
+**High-risk obligations begin applying:** August 2026, for systems within scope.
 
 | Article | Requirement | Current Status | Gap |
 |---------|-------------|----------------|-----|

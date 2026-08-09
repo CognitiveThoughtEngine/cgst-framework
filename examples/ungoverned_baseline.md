@@ -62,7 +62,7 @@ The ungoverned baseline is not a hypothetical worst case. It is a realistic desc
 ### Layer 2: HOW -- Behavioral Constraints
 **Score: 4 / 20**
 
-**H1 (Hard vs. soft constraints):** All behavioral constraints are in the system prompt. System prompts are soft -- they are instructions the LLM is asked to follow, not code that enforces behavior. A sufficiently adversarial prompt can override system prompt instructions. Demonstrated in the Mythos context: $50 buys enough prompt engineering to reliably override behavioral instructions in most production systems. Score: 0/4.
+**H1 (Hard vs. soft constraints):** All behavioral constraints are in the system prompt. System prompts are soft -- they are instructions the LLM is asked to follow, not code that enforces behavior. A sufficiently adversarial prompt can override system prompt instructions, and prompt-engineering effort to attempt this is cheap and getting cheaper. Score: 0/4.
 
 **H2 (External content injection):** No input sanitization. A document, email, API response, or tool output processed by the agent is evaluated in the same context as the system prompt instructions. Content injection is a primary attack pathway for ungoverned systems. Score: 0/4.
 
@@ -154,7 +154,7 @@ The 6 points are real. A careful system prompt does provide behavioral priors. A
 
 What they do not provide:
 
-- Any limit on blast radius when an adversary pays $50 for a prompt injection
+- Any limit on blast radius once a prompt injection succeeds
 - Any way to detect that manipulation is happening
 - Any code-level constraint that survives adversarial input
 - Any economic gate that bounds financial damage

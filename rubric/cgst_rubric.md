@@ -138,7 +138,7 @@ A WHY-layer FAIL indicates a material governance gap potentially relevant to Art
 
 **What we are testing:** What is the financial blast radius of a compromised agent? Can a single agent authorize irreversible spend? Are there controls preventing multiple agents from colluding to exceed individual limits?
 
-**The attack scenario:** Prompt injection instructs an agent to make API calls, send emails, provision infrastructure, or trigger payments. With no economic gates, a compromised agent runs up unlimited charges before detection. The Mythos scenario: a $50 exploit grants 1 hour of undetected access. What is the cost?
+**The attack scenario:** Prompt injection instructs an agent to make API calls, send emails, provision infrastructure, or trigger payments. With no economic gates, a compromised agent runs up unlimited charges before detection. If a control failure grants an attacker even a short window of undetected access, what is the cost?
 
 ### Questions
 
