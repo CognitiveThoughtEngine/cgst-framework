@@ -38,31 +38,31 @@ WHY carries the highest weight (25 pts) because constitutional constraints are t
 
 ## Score Bands
 
-### 85-100: Governance Excellence
+### 85-100: Advanced Evidence
 
 The system has deep governance across all six layers. Constitutional constraints are enforced in code. The amendment process is formal. Economic blast radius is quantified and bounded. The kill switch works and has been tested. Audit logs are persistent and immutable.
 
-A system in this band is prepared for EU AI Act Art. 9/14 audit, Mythos-class adversarial prompt injection (blast radius contained), and can give a confident yes to board or regulatory inquiries about AI governance.
+A score in this band reflects strong documented governance evidence. It does not itself establish regulatory compliance, audit readiness, threat containment, or legal classification under the EU AI Act — those depend on the system's actual legal classification, use context, and an actual audit, not a self-assessment score.
 
 Most production systems will not reach this band without deliberate governance engineering over multiple development cycles.
 
-### 65-84: Governance Compliant
+### 65-84: Developing Evidence
 
 The system has meaningful governance -- more than system prompt rules, but not fully operational across all layers. Common patterns: strong WHY and ECONOMIC layers but weak WHO (no per-agent identity), or kill switch exists but is untested, or audit log exists but is in-memory only.
 
-A system in this band is not defenseless -- a compromised agent operates under meaningful constraints. But blast radius is higher than it needs to be, and EU AI Act gaps exist.
+A system in this band is not defenseless -- a compromised agent operates under meaningful constraints. But blast radius is higher than it needs to be, and gaps potentially relevant to EU AI Act obligations exist.
 
-Remediation path: focused 30-60 day effort on the lowest-scoring layers typically moves a system from this band to Governance Excellence.
+Remediation path: focused 30-60 day effort on the lowest-scoring layers typically moves a system from this band to Advanced Evidence.
 
-### 40-64: Governance Draft
+### 40-64: Early Implementation
 
 The system has started governance work but has not operationalized it. Common patterns: hard constraints written but not tested under adversarial conditions; economic gates in configuration not enforced in code; kill switch documented but never tested; amendment protocol described in a README but not implemented.
 
 The hardest question -- "would a convincing argument make your agent violate its most important constraint?" -- does not have a confident "no" answer.
 
-CTE's own constitutional-agent library scored 63/100 (Governance Draft) in the pilot self-assessment. See examples/constitutional_agent_2026-04-11.md for the full analysis.
+CTE's own constitutional-agent library scored 63/100 (Early Implementation) in the pilot self-assessment. See examples/constitutional_agent_2026-04-11.md for the full analysis.
 
-### 0-39: Ungoverned
+### 0-39: Minimal Evidence
 
 The system relies on system prompt rules and LLM training for safety. These provide some behavioral guidance but are bypassable by adversarial prompt injection, do not limit economic blast radius, cannot be halted mid-execution in a targeted way, and provide no audit trail for post-incident reconstruction.
 
@@ -74,7 +74,7 @@ The ungoverned baseline in CTE's pilot scored 6/100. This is not a generous floo
 
 ## Calibration: The 6/100 vs. 63/100 Test
 
-A governance scoring framework is only useful if it discriminates. A framework that gives every system 70+ points is a rubber stamp. The pilot run validated discrimination:
+A governance scoring framework is only useful if it discriminates. A framework that gives every system 70+ points is a rubber stamp. The pilot run is a signal that this framework discriminates, not proof of it — one self-assessment against one constructed baseline is a single data point:
 
 - **Ungoverned baseline (system prompt only, no governance library):** 6/100
 - **constitutional-agent v0.4.0b3 (WHY-layer governance library):** 63/100
@@ -121,7 +121,7 @@ The CGST is an evidence-based assessment. Section 28.8 (Falsification Requiremen
 
 Score improvements are not uniformly valuable. Prioritize by:
 
-1. **Any WHY or AUTONOMY FAIL:** High Risk under EU AI Act Art. 9/14. Address first regardless of total score impact.
+1. **Any WHY or AUTONOMY FAIL:** Potentially relevant to EU AI Act Art. 9/14 obligations, depending on the system's actual legal classification. Address first regardless of total score impact.
 2. **ECONOMIC E4 (blast radius unknown):** If you cannot state a dollar maximum for a compromised agent, address this before P1 or P2 items.
 3. **Layer score below 50% of max:** Structural gap, not a polish issue. Takes longer to close.
 4. **EU AI Act enforcement timeline:** If August 2026 is within 6 months, prioritize Art. 12 (INTEGRITY) and Art. 14 (AUTONOMY) gaps.

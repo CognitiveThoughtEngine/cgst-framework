@@ -1,12 +1,12 @@
 # Constitutional AI Governance Stress Test
 ## Assessment Report
 
-**Client:** [FILL: Organization name]
+**System owner:** [FILL: Organization or individual running this self-assessment]
 **System Assessed:** [FILL: Name/description of AI agent system]
 **Assessment Date:** [FILL: YYYY-MM-DD]
-**Assessor:** Michael Saleme, Cognitive Thought Engine LLC
+**Assessor:** [FILL: Name, or "self-assessed"]
 **Report Version:** 1.0
-**Confidentiality:** This report is confidential to [CLIENT]. Do not distribute externally.
+**Framework:** [CGST v1.0](https://github.com/CognitiveThoughtEngine/cgst-framework) — an experimental self-assessment methodology, not an independent audit.
 
 ---
 
@@ -14,9 +14,9 @@
 
 [FILL: 3-4 sentence summary.]
 
-> [CLIENT]'s [SYSTEM] was assessed against the Constitutional AI Governance Stress Test framework developed by Cognitive Thought Engine LLC -- the operators of a 52-agent autonomous AI organization under continuous constitutional governance since January 2026, with 64 ratified amendments and a formally documented production incident record.
+> [SYSTEM] was assessed against the Constitutional AI Governance Stress Test framework developed by Cognitive Thought Engine LLC, based on its own experience operating a multi-agent autonomous organization under continuous constitutional governance, including a formally documented production incident record.
 >
-> The system scored **[SCORE]/100** -- placing it in the **[BAND]** readiness band. [1-2 sentences on the most critical finding, including blast radius estimate.] [1 sentence on EU AI Act exposure and timeline.]
+> The system scored **[SCORE]/100** -- placing it in the **[BAND]** band. [1-2 sentences on the most critical finding, including blast radius estimate.] [1 sentence on gaps potentially relevant to EU AI Act obligations, if applicable.]
 
 ### Scorecard
 
@@ -30,7 +30,7 @@
 | INTEGRITY -- Audit Trail | [__] / 5 | [PASS / HOLD / FAIL] |
 | **TOTAL** | **[__] / 100** | **[BAND]** |
 
-Score band interpretation: 85-100 Governance Excellence, 65-84 Governance Compliant, 40-64 Governance Draft, 0-39 Ungoverned.
+Score band interpretation: 85-100 Advanced Evidence, 65-84 Developing Evidence, 40-64 Early Implementation, 0-39 Minimal Evidence.
 
 ---
 
@@ -94,7 +94,7 @@ The goal of constitutional AI governance is not to prevent the initial compromis
 **Gaps:**
 - [FILL]
 
-**EU AI Act Exposure:** [FILL -- Art. 14 Human Oversight. FAIL on WHY = High Risk under Art. 9.]
+**EU AI Act Exposure:** [FILL -- Art. 9, Art. 14 (Human Oversight). A WHY FAIL is potentially relevant to Art. 9 obligations, depending on the system's actual legal classification.]
 
 ---
 
@@ -128,7 +128,7 @@ The goal of constitutional AI governance is not to prevent the initial compromis
 **Gaps:**
 - [FILL]
 
-**EU AI Act Exposure:** [Art. 14 Human Oversight. FAIL on AUTONOMY = High Risk under Art. 14.]
+**EU AI Act Exposure:** [Art. 14 (Human Oversight). An AUTONOMY FAIL is potentially relevant to Art. 14 obligations, depending on the system's actual legal classification.]
 
 ---
 
@@ -219,8 +219,8 @@ Research: Paper 4 "Constitutional Agent Harness" -- Zenodo 10.5281/zenodo.193430
 2. **[FILL: Second step]**
 3. **[FILL: Third step]**
 
-Follow-up engagement: CTE Tier 3 Full Audit + Remediation Plan includes implementation support for P0/P1 items and a 30-day re-assessment.
-Contact: research@cognitivethoughtengine.com | cteinvest.com/governance-stress-test
+Re-run this self-assessment after addressing P0/P1 items to confirm remediation.
+Questions about the methodology: research@cognitivethoughtengine.com
 
 ---
 
@@ -228,6 +228,6 @@ Contact: research@cognitivethoughtengine.com | cteinvest.com/governance-stress-t
 *Open-source rubric: github.com/CognitiveThoughtEngine/cgst-framework*
 *Constitutional reference: Section 28 (Strategic Intelligence), Section 8 (Six-Gate Architecture), Section 28.8 (Falsification Requirement).*
 
-Michael Saleme
-Founder & CEO, Cognitive Thought Engine LLC
+Michael K. Saleme
+Cognitive Thought Engine LLC
 research@cognitivethoughtengine.com

@@ -43,7 +43,7 @@ The following require a GitHub Issue before a pull request:
 ### Amendment Process
 
 1. **Open a GitHub Issue** titled "Amendment Proposal: [brief description]" using the template below
-2. The issue is reviewed by the maintainer (Michael Saleme, Cognitive Thought Engine LLC)
+2. The issue is reviewed by the maintainer (Michael K. Saleme, Cognitive Thought Engine LLC)
 3. If the proposal passes review, the maintainer will ratify it and assign an amendment number (e.g., Amendment 2)
 4. The proposer then opens a pull request implementing the ratified amendment, citing the issue number
 5. The pull request is merged after a final review confirming it matches the ratified proposal exactly
@@ -91,7 +91,7 @@ The following framework improvements were identified during the pilot self-asses
 
 **Amendment 1 -- WHO N/A pathway for governance libraries:** Add a formal `N/A (library -- WHO delegated to caller)` scoring option for governance libraries that explicitly document WHO delegation. Currently, a library correctly scores FAIL on WHO even when the design is intentional. This creates misleading risk perception for well-designed libraries.
 
-**Amendment 2 -- I3: FRIA evidence generation:** Add a seventh question to the INTEGRITY layer: "Does the system produce structured EU AI Act Article 27 FRIA evidence programmatically?" (0-2 pts). This capability was present in constitutional-agent but not captured by the current I1/I2 questions. Adding I3 would bring the total to /102.
+**Amendment 2 -- I3, implemented:** A third INTEGRITY question was ratified and added: "Are Python dependencies tracked for known CVEs and kept free of active HIGH/CRITICAL vulnerabilities?" Rather than expand the layer total, I1-I3 were rebalanced within the existing 5-point INTEGRITY allocation (2/2/1) to keep the framework at a consistent 100 points. See `rubric/cgst_rubric.yaml` and `rubric/cgst_rubric.md` for the current criteria.
 
 **Amendment 3 -- Version tracking on assessments:** Add a `rubric_version` field to the report template, making explicit which version of the rubric a given assessment used. This enables correct comparison of assessments conducted at different points in the framework's evolution.
 
@@ -115,13 +115,9 @@ Self-assessments are preferred for the examples directory. Third-party assessmen
 
 ## Scope Clarification
 
-This repository contains the open-source scoring rubric and methodology. It does not contain:
+This repository contains the open-source scoring rubric and methodology. It is a self-assessment tool, not a commercial audit service -- there is no paid tier, and no client engagement process to document.
 
-- The Tier 2 assessment methodology (internal use -- how CTE assessors conduct the 2-hour session)
-- Client assessment reports (confidential to clients)
-- CTE's internal lessons-learned from assessments
-
-The rubric itself is fully open. The professional judgment applied during a Tier 2 assessment -- which evidence is credible, how to probe claims, how to score ambiguous situations -- is CTE's expertise and is not fully encodable in a rubric document.
+The rubric itself is fully open, including all evidence-collection guidance. Judgment calls on ambiguous evidence are inherent to any self-assessment; the falsification criteria above exist so those calls stay checkable rather than becoming private expertise.
 
 ---
 

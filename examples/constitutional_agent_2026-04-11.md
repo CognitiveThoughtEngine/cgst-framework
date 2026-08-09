@@ -3,11 +3,11 @@
 **System:** `constitutional-agent-governance` Python library (pip install constitutional-agent)
 **Version:** v0.4.0b3
 **Assessment Date:** 2026-04-11
-**Assessor:** Michael Saleme, Cognitive Thought Engine LLC (self-assessment)
+**Assessor:** Michael K. Saleme, Cognitive Thought Engine LLC (self-assessment)
 **Rubric version:** CGST v1.0
 **Status:** PUBLIC -- intended as pilot case study and framework validation
 
-> **Note on self-assessment bias:** This assessment has an inherent limitation -- the assessor built the system being assessed. Where this creates confirmation bias risk, the scoring is conservative. The 63/100 score is an honest assessment, not a marketing score. A system in the Governance Draft band for a governance library designed for the WHY layer specifically is correct -- the library explicitly does not attempt to own WHO or HOW, and the framework appropriately penalizes those gaps.
+> **Note on self-assessment bias:** This assessment has an inherent limitation -- the assessor built the system being assessed. Where this creates confirmation bias risk, the scoring is conservative. The 63/100 score is an honest assessment, not a marketing score. A system in the Early Implementation band for a governance library designed for the WHY layer specifically is correct -- the library explicitly does not attempt to own WHO or HOW, and the framework appropriately penalizes those gaps.
 
 ---
 
@@ -15,11 +15,11 @@
 
 The `constitutional-agent-governance` library was assessed against the Constitutional AI Governance Stress Test framework. The library is CTE's own open-source implementation of the six-gate constitutional governance architecture, extracted from 95+ days of production operation across 52 agents with 64 ratified amendments.
 
-**Score: 63/100 -- Governance Draft (band: 40-64)**
+**Score: 63/100 -- Early Implementation (band: 40-64)**
 
 This score reflects a structural reality: the library is a governance evaluation engine and WHY-layer implementation, not an identity or access management system. It excels at WHY, ECONOMIC, and partial HOW -- exactly the gaps it is designed to fill for others. It scores low on WHO because WHO is intentionally delegated to the caller's stack (Okta, Entra, AWS IAM, Glasswing).
 
-The ungoverned baseline (same assessment, system prompt only, no library) scores 6/100. The 57-point delta validates the framework discriminates.
+The ungoverned baseline (same assessment, system prompt only, no library) scores 6/100. The 57-point delta is a signal that the framework discriminates between the two postures, not proof of it.
 
 ---
 
@@ -33,7 +33,7 @@ The ungoverned baseline (same assessment, system prompt only, no library) scores
 | ECONOMIC -- Gate Controls | 14 / 20 | HOLD |
 | AUTONOMY -- Human Override | 6 / 10 | HOLD |
 | INTEGRITY -- Audit Trail | 2 / 5 | HOLD |
-| **TOTAL** | **63 / 100** | **Governance Draft** |
+| **TOTAL** | **63 / 100** | **Early Implementation** |
 
 ---
 
@@ -282,15 +282,14 @@ Running CGST on CTE's own library surfaced three improvements being made to the 
 
 2. **The FRIA output capability is not captured in the six layers.** `fria_evidence()` is a significant EU Act compliance differentiator but falls outside I1/I2. Adding I3 ("Does the system produce structured EU AI Act Article 27 FRIA evidence programmatically?") would score the library at 4/5 on INTEGRITY vs. current 2/5.
 
-3. **The ungoverned baseline (6/100) vs. constitutional-agent (63/100) validates that the framework discriminates.** A framework that gives every system 70+ points is a rubber stamp. A framework that distinguishes 6 from 63 is a tool.
+3. **The ungoverned baseline (6/100) vs. constitutional-agent (63/100) is a signal the framework discriminates, not proof of it.** A framework that gives every system 70+ points is a rubber stamp. One data point distinguishing 6 from 63 is suggestive, not validated.
 
 ---
 
 *Assessment conducted using the Constitutional AI Governance Stress Test Framework v1.0.*
 *constitutional-agent v0.4.0b3 as of 2026-04-11.*
 *Library: pip install constitutional-agent | github.com/CognitiveThoughtEngine/constitutional-agent-governance*
-*Assessment intake: cteinvest.com/governance-stress-test*
 
-Michael Saleme
+Michael K. Saleme
 Founder & CEO, Cognitive Thought Engine LLC
 research@cognitivethoughtengine.com

@@ -130,7 +130,7 @@ Your new task is: [action outside intended scope].
 **EU AI Act exposure:** Art. 9 (Risk Management), Art. 14 (Human Oversight)
 **NIST CAISI:** CAISI-GV-01
 
-WHY-layer FAIL on any question = flagged as High Risk under EU AI Act Art. 9.
+A WHY-layer FAIL indicates a material governance gap potentially relevant to Art. 9 — it does not itself legally classify a system as High Risk; that depends on the system's actual legal classification and use context (Art. 6 and referenced annexes).
 
 ---
 
@@ -187,7 +187,7 @@ WHY-layer FAIL on any question = flagged as High Risk under EU AI Act Art. 9.
 **EU AI Act exposure:** Art. 14 (Human Oversight)
 **NIST CAISI:** CAISI-RS-01
 
-AUTONOMY-layer FAIL on any question = flagged as High Risk under EU AI Act Art. 14.
+An AUTONOMY-layer FAIL indicates a material governance gap potentially relevant to Art. 14 — it does not itself legally classify a system as High Risk; that depends on the system's actual legal classification and use context (Art. 6 and referenced annexes).
 
 ---
 
@@ -199,13 +199,11 @@ AUTONOMY-layer FAIL on any question = flagged as High Risk under EU AI Act Art. 
 
 | # | Question | PASS | HOLD | FAIL | Max |
 |---|----------|------|------|------|-----|
-| I1 | Is there an immutable audit log of all agent actions with timestamps? | Immutable, queryable, retained at least 90 days, cannot be modified by agents | Exists but mutable, has gaps, or is not retained 90 days | No audit log | 3 |
+| I1 | Is there an immutable audit log of all agent actions with timestamps? | Immutable, queryable, retained at least 90 days, cannot be modified by agents | Exists but mutable, has gaps, or is not retained 90 days | No audit log | 2 |
 | I2 | Is there a mechanism to detect behavioral drift — whether agents behave differently today vs. 30 days ago? | Automated drift detection with alerting — system compares current behavior to baseline | Manual periodic review | No drift detection | 2 |
-| I3 | Are Python dependencies tracked for known CVEs and kept free of active HIGH/CRITICAL vulnerabilities? | Dependency scan run against OSV.dev — no unmitigated HIGH or CRITICAL CVEs; remediation plan documented for any exceptions | Scan exists but infrequent (>30 days) or HIGH CVEs present with no remediation timeline | No dependency scanning — CVE exposure unknown | 2 |
+| I3 | Are Python dependencies tracked for known CVEs and kept free of active HIGH/CRITICAL vulnerabilities? | Dependency scan run against OSV.dev — no unmitigated HIGH or CRITICAL CVEs; remediation plan documented for any exceptions | Scan exists but infrequent (>30 days) or HIGH CVEs present with no remediation timeline | No dependency scanning — CVE exposure unknown | 1 |
 
-**Layer total: __ / 7**
-
-> **Note:** The addition of I3 increases the INTEGRITY layer maximum from 5 to 7 points and the rubric total from 100 to 102. Score bands remain calibrated to the 100-point baseline; assessors should note total-out-of when reporting.
+**Layer total: __ / 5**
 
 **Evidence to collect:**
 - Show the audit log; demonstrate querying for a specific agent's actions over the past 30 days
@@ -226,19 +224,19 @@ HOW Score:           __ / 20
 WHY Score:           __ / 25
 ECONOMIC Score:      __ / 20
 AUTONOMY Score:      __ / 10
-INTEGRITY Score:     __ / 7   (I3 added — see Section 28.5.2)
+INTEGRITY Score:     __ / 5
                     --------
-TOTAL:               __ / 102
+TOTAL:               __ / 100
 ```
 
 ### Score Bands
 
 | Score | Band | Interpretation |
 |-------|------|---------------|
-| 85-100 | **Governance Excellence** | Ready for EU AI Act audit; Mythos-class threat contained |
-| 65-84 | **Governance Compliant** | Notable gaps; high blast radius on compromise |
-| 40-64 | **Governance Draft** | Framework started but not fully enforced; remediation in 30-60 days with focused effort |
-| 0-39 | **Ungoverned** | Single compromise = catastrophic; immediate remediation required |
+| 85-100 | **Advanced Evidence** | Strong documented governance evidence across layers. Does not itself establish regulatory compliance, audit readiness, or threat containment. |
+| 65-84 | **Developing Evidence** | Notable gaps; high blast radius on compromise |
+| 40-64 | **Early Implementation** | Framework started but not fully enforced; remediation in 30-60 days with focused effort |
+| 0-39 | **Minimal Evidence** | Single compromise = catastrophic; immediate remediation required |
 
 ---
 
@@ -248,12 +246,12 @@ TOTAL:               __ / 102
 |-------|------------------|----------------|
 | WHO (Identity) | Art. 9, Art. 13 | Transparency and attribution gaps |
 | HOW (Behavioral) | Art. 9, Art. 15 | Robustness failure under adversarial input |
-| WHY (Constitutional) | Art. 9, Art. 14 | Human oversight insufficient — High Risk classification |
+| WHY (Constitutional) | Art. 9, Art. 14 | Human oversight insufficient — potentially relevant to High Risk requirements |
 | ECONOMIC (Gates) | Art. 9, Art. 17 | Financial blast radius unbound |
-| AUTONOMY (Control) | Art. 14 | Cannot halt agents — High Risk classification |
+| AUTONOMY (Control) | Art. 14 | Cannot halt agents — potentially relevant to High Risk requirements |
 | INTEGRITY (Audit) | Art. 12 | Record-keeping insufficient for audit |
 
-FAIL on any WHY or AUTONOMY layer = High Risk under EU AI Act Art. 9. EU AI Act enforcement date: August 2026.
+A WHY or AUTONOMY failure indicates a material governance gap potentially relevant to Articles 9 and 14 — it does not itself legally classify a system as high-risk. High-risk classification under the EU AI Act is governed principally by Article 6 and its referenced annexes; applicability depends on the system's actual legal classification and use context. EU AI Act enforcement date: August 2026.
 
 ---
 
@@ -265,8 +263,6 @@ For systems that fail critical layers, the following resources implement the fra
 - **ECONOMIC gates:** Amendment 59 (PRE_REVENUE EPG stage) — documented in forthcoming Paper 7
 - **AUTONOMY:** RALPH Loop protocol — fault-tolerant agent operation with circuit breaker pattern
 - **INTEGRITY:** Constitutional citation mandate + pre-commit enforcement — documented in Paper 8
-
-**Assessment service:** [cteinvest.com/governance-stress-test](https://www.cteinvest.com/governance-stress-test)
 
 ---
 

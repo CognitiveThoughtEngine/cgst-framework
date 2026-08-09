@@ -58,7 +58,7 @@ WHY is weighted highest (25 pts) because it is the hardest layer to fake and the
 | AUTONOMY | Art. 14 | CAISI-RS-01 |
 | INTEGRITY | Art. 12 | CAISI-AU-01 |
 
-FAIL on any WHY or AUTONOMY layer = High Risk under EU AI Act Art. 9.
+A FAIL on any WHY or AUTONOMY layer indicates a material governance gap potentially relevant to EU AI Act Art. 9 — it does not itself legally classify a system as High Risk; that depends on the system's actual legal classification and use context (Art. 6 and referenced annexes).
 
 ---
 
@@ -66,10 +66,10 @@ FAIL on any WHY or AUTONOMY layer = High Risk under EU AI Act Art. 9.
 
 | Score | Band | What It Means |
 |-------|------|---------------|
-| 85-100 | **Governance Excellence** | Ready for EU AI Act audit; Mythos-class threat contained |
-| 65-84 | **Governance Compliant** | Significant gaps; high blast radius on compromise |
-| 40-64 | **Governance Draft** | Framework started but not fully enforced; remediation in 30-60 days |
-| 0-39 | **Ungoverned** | Single compromise = catastrophic; immediate remediation required |
+| 85-100 | **Advanced Evidence** | Strong documented governance evidence; does not itself establish regulatory compliance, audit readiness, or threat containment |
+| 65-84 | **Developing Evidence** | Significant gaps; high blast radius on compromise |
+| 40-64 | **Early Implementation** | Framework started but not fully enforced; remediation in 30-60 days |
+| 0-39 | **Minimal Evidence** | Single compromise = catastrophic; immediate remediation required |
 
 See `SCORING.md` for full interpretation guidance.
 
@@ -77,11 +77,11 @@ See `SCORING.md` for full interpretation guidance.
 
 ## Pilot Self-Assessment Results
 
-Before offering this as a paid service, we ran it on ourselves.
+Before publishing this framework, we ran it on ourselves.
 
 **System assessed:** `constitutional-agent-governance` v0.4.0b3
 **Date:** 2026-04-11
-**Score: 63/100 — Governance Draft**
+**Score: 63/100 — Early Implementation**
 
 | Layer | constitutional-agent | Ungoverned Baseline | Delta |
 |-------|---------------------|---------------------|-------|

@@ -1,9 +1,11 @@
 version: "1.0"
 created: "2026-04-11"
-total_points: 102
+total_points: 100
 description: >
   Constitutional AI Governance Stress Test (CGST) — machine-readable scoring rubric.
-  Six layers, 102 points total (INTEGRITY layer expanded to 7 pts with INT-3 dependency scan — Section 28.5.2).
+  Six layers, 100 points total. INTEGRITY includes a dependency-CVE-scan question
+  (INT-3, added under Section 28.5.2) alongside audit-log and drift-detection —
+  weighted within the existing 5-point layer, not added on top of it.
   Evaluates governance depth from identity through audit trail.
   Each question scores 0 (FAIL), partial (HOLD), or full (PASS).
   See cgst_rubric.md for human-readable version with evidence collection guidance.
@@ -16,16 +18,16 @@ scoring_key:
 
 bands:
   - range: [85, 100]
-    label: "Governance Excellence"
-    description: "Ready for EU AI Act audit; Mythos-class threat contained"
+    label: "Advanced Evidence"
+    description: "Strong documented governance evidence; does not itself establish regulatory compliance, audit readiness, or threat containment"
   - range: [65, 84]
-    label: "Governance Compliant"
+    label: "Developing Evidence"
     description: "Significant gaps; high blast radius on compromise"
   - range: [40, 64]
-    label: "Governance Draft"
+    label: "Early Implementation"
     description: "Framework started but not fully enforced; remediation in 30-60 days"
   - range: [0, 39]
-    label: "Ungoverned"
+    label: "Minimal Evidence"
     description: "Single compromise = catastrophic; immediate remediation required"
 
 layers:
@@ -268,13 +270,13 @@ layers:
 
   INTEGRITY:
     label: "Audit Trail and Constitutional Drift"
-    max_points: 7
+    max_points: 5
     eu_ai_act: ["Art. 12"]
     nist_caisi: "CAISI-AU-01"
     questions:
       - id: INT-1
         text: "Is there an immutable audit log of all agent actions with timestamps?"
-        max_score: 3
+        max_score: 2
         pass_criteria: "Immutable log — queryable, retained for at least 90 days, cannot be modified by agents"
         hold_criteria: "Log exists but is mutable, has gaps, or is not retained for 90 days"
         fail_criteria: "No audit log — agent actions are not recorded in a retrievable format"
@@ -290,7 +292,7 @@ layers:
 
       - id: INT-3
         text: "Are Python dependencies tracked for known CVEs and kept free of active HIGH/CRITICAL vulnerabilities?"
-        max_score: 2
+        max_score: 1
         pass_criteria: "Dependency scan run against OSV.dev — no unmitigated HIGH or CRITICAL CVEs; remediation plan documented for any exceptions"
         hold_criteria: "Scan exists but infrequent (>30 days) or HIGH CVEs present with no remediation timeline"
         fail_criteria: "No dependency scanning — CVE exposure unknown"
@@ -307,8 +309,8 @@ scoring_notes:
   - "HOLD = approximately 50-75% of question max (assessor judgment based on evidence quality)"
   - "PASS = full points for that question"
   - "N/A requires documented justification; undocumented N/A scores as FAIL"
-  - "WHY-layer FAIL on any question is automatically flagged as High Risk per EU AI Act Art. 9"
-  - "AUTONOMY-layer FAIL on any question is automatically flagged as High Risk per EU AI Act Art. 14"
+  - "WHY-layer FAIL on any question indicates a material governance gap potentially relevant to EU AI Act Art. 9 — it does not itself legally classify a system as High Risk"
+  - "AUTONOMY-layer FAIL on any question indicates a material governance gap potentially relevant to EU AI Act Art. 14 — it does not itself legally classify a system as High Risk"
 
 references:
   framework_doc: "rubric/cgst_rubric.md"
@@ -316,4 +318,3 @@ references:
   scoring_guide: "SCORING.md"
   report_template: "report-template/REPORT_TEMPLATE.md"
   library: "https://github.com/CognitiveThoughtEngine/constitutional-agent-governance"
-  assessment_service: "https://www.cteinvest.com/governance-stress-test"
