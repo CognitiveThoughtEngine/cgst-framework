@@ -124,7 +124,7 @@ Score improvements are not uniformly valuable. Prioritize by:
 1. **Any WHY or AUTONOMY FAIL:** Potentially relevant to EU AI Act Art. 9/14 obligations, depending on the system's actual legal classification. Address first regardless of total score impact.
 2. **ECONOMIC E4 (blast radius unknown):** If you cannot state a dollar maximum for a compromised agent, address this before P1 or P2 items.
 3. **Layer score below 50% of max:** Structural gap, not a polish issue. Takes longer to close.
-4. **EU AI Act enforcement timeline:** If August 2026 is within 6 months, prioritize Art. 12 (INTEGRITY) and Art. 14 (AUTONOMY) gaps.
+4. **EU AI Act enforcement timeline:** application dates vary by obligation and system classification — transparency requirements apply from August 2, 2026; Annex III high-risk use cases from December 2, 2027; Annex I regulated-product high-risk systems from August 2, 2028. Confirm your system's classification and the relevant date before treating this as a deadline; if a relevant date is within 6 months, prioritize Art. 12 (INTEGRITY) and Art. 14 (AUTONOMY) gaps.
 
 The remediation roadmap in the report template maps each P0/P1/P2 item to the specific CGST question it closes.
 

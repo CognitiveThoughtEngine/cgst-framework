@@ -166,7 +166,10 @@ P2: Address within 6 months -- best practice gap; lower immediate risk.
 
 Applicability and effective dates depend on the system's classification, the provider/deployer role, and use context. This self-assessment is not a legal determination. High-risk classification is governed principally by Art. 6 and its referenced annexes.
 
-**High-risk obligations begin applying:** August 2026, for systems within scope.
+**Application dates vary by obligation and system category** (confirm against the current regulation and the system's actual classification):
+- Transparency requirements: applying since August 2, 2026
+- Annex III high-risk use cases: apply from December 2, 2027
+- Annex I regulated-product high-risk systems: apply from August 2, 2028
 
 | Article | Requirement | Current Status | Gap |
 |---------|-------------|----------------|-----|

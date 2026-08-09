@@ -251,7 +251,7 @@ TOTAL:               __ / 100
 | AUTONOMY (Control) | Art. 14 | Cannot halt agents — potentially relevant to High Risk requirements |
 | INTEGRITY (Audit) | Art. 12 | Record-keeping insufficient for audit |
 
-A WHY or AUTONOMY failure indicates a material governance gap potentially relevant to Articles 9 and 14 — it does not itself legally classify a system as high-risk. High-risk classification under the EU AI Act is governed principally by Article 6 and its referenced annexes; applicability depends on the system's actual legal classification and use context. EU AI Act enforcement date: August 2026.
+A WHY or AUTONOMY failure indicates a material governance gap potentially relevant to Articles 9 and 14 — it does not itself legally classify a system as high-risk. High-risk classification under the EU AI Act is governed principally by Article 6 and its referenced annexes; applicability depends on the system's actual legal classification and use context. EU AI Act application dates vary by obligation and system category: transparency requirements apply since August 2, 2026; Annex III high-risk use cases from December 2, 2027; Annex I regulated-product high-risk systems from August 2, 2028.
 
 ---
 
