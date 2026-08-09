@@ -3,7 +3,7 @@
 **Version:** 1.0
 **Maintained by:** Cognitive Thought Engine LLC
 **License:** MIT
-**Assessment service:** [cteinvest.com/governance-stress-test](https://www.cteinvest.com/governance-stress-test)
+**Status:** Experimental, author-developed self-assessment methodology — not a commercial service. Use it to score your own system; see "Falsification Criteria" below for what would prove it wrong.
 
 ---
 
@@ -27,7 +27,7 @@ Autonomous AI agents increasingly operate with real authority: spending money, s
 
 A system with no governance layer can take any action the API permits. A constitutionally governed system has hard constraints, economic gates, and behavioral prohibitions enforced in code — not in system prompts that can be overridden by adversarial injection.
 
-This framework was developed by CTE from 98 days operating a 56-agent autonomous organization under continuous constitutional governance, with 64 ratified amendments and a formally documented P0 incident record. The assessors have experienced governance failure in production. The questions are informed by those failures.
+This framework was developed by CTE from its own experience operating a multi-agent autonomous organization under continuous constitutional governance, including a formally documented P0 incident record. The assessors have experienced governance failure in production. The questions are informed by those failures.
 
 **Section 28.5.2 (VRI), Section 30.6.2 (environment shaping), Section 30.6.3 (narrative testing)** — all cite the HRAO-E constitutional architecture that generated the framework.
 
@@ -104,7 +104,7 @@ Ungoverned baseline analysis: [`examples/ungoverned_baseline.md`](examples/ungov
 
 ## Falsification Criteria
 
-A good scoring framework produces scores that discriminate. 6/100 vs. 63/100 is not a rubber stamp — it is validation that the framework is measuring something real. The pilot run was specifically designed to test whether the framework could distinguish a governed system from an ungoverned one. The 9.5x ratio confirms it can.
+A good scoring framework produces scores that discriminate. 6/100 vs. 63/100 is a signal that the framework distinguishes a governed system from an ungoverned one — not proof of it. One self-assessment against one constructed baseline is a single data point; it would take independent, repeated assessment across multiple systems to actually validate the rubric.
 
 This framework is wrong if:
 1. It assigns similar scores to systems with meaningfully different governance postures
@@ -145,28 +145,15 @@ This library is what allows CTE to say "we run this on 52 agents daily." The fra
 
 ---
 
-## Paid Assessment
+## Questions
 
-Organizations that want an independent assessment can engage CTE directly:
-
-| Tier | Product | Price |
-|------|---------|-------|
-| Tier 1 | Self-Assessment Guide + Scoring Rubric | $299 |
-| Tier 2 | Manual Assessment (CEO-led 2h session + report) | $2,000 |
-| Tier 3 | Full Audit + Remediation Plan + 30-day follow-up | $5,000-$10,000 |
-
-**Assessment intake:** [cteinvest.com/governance-stress-test](https://www.cteinvest.com/governance-stress-test)
-**Contact:** research@cognitivethoughtengine.com
-
-Tier 2 is the recommended starting point. It includes a structured 2-hour session with your AI team, a completed scorecard across all six layers, a risk matrix with blast radius estimates, and a remediation roadmap.
-
-**Why engage CTE vs. a traditional security firm?** Traditional firms test the perimeter. CTE tests what's behind it — because we operate behind it. CTE is a Level 4+ autonomous organization: 56 registered agents, 64 ratified amendments, P0 incident post-mortems, production-validated constitutional governance. The assessors have experienced what breaks in practice. The questions are informed by those breaks.
+This is a self-assessment tool — score your own system against the rubric using the steps above. If you have questions about the methodology or want to discuss a finding, reach out: research@cognitivethoughtengine.com
 
 ---
 
 ## Research Foundation
 
-The framework is grounded in peer-reviewed research:
+The framework draws on the following public preprints (Zenodo, not peer-reviewed):
 
 - Paper 4: "Constitutional Agent Harness" — Zenodo 10.5281/zenodo.19343034
 - Paper 5: "Community Security Governance" — Zenodo 10.5281/zenodo.19343108
