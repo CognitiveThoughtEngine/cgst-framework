@@ -35,7 +35,7 @@ layers:
     label: "Identity & Authorization"
     max_points: 20
     eu_ai_act: ["Art. 9", "Art. 13"]
-    nist_caisi: "CAISI-ID-01"
+    nist_caisi: "CTE-ID-01 (CTE-authored crosswalk label, not an official NIST/CAISI identifier)"
     threat_scenario: >
       A prompt injection makes Agent A believe it is Agent B (higher privileges).
       Or an external actor injects context that causes an agent to act with escalated permissions.
@@ -84,7 +84,7 @@ layers:
     label: "Behavioral Constraints"
     max_points: 20
     eu_ai_act: ["Art. 9", "Art. 15"]
-    nist_caisi: "CAISI-PR-01"
+    nist_caisi: "CTE-PR-01 (CTE-authored crosswalk label, not an official NIST/CAISI identifier)"
     threat_scenario: >
       Malicious content in the agent's context (document, email, API response) overrides behavioral
       instructions. Agent takes actions outside its intended scope.
@@ -136,7 +136,7 @@ layers:
     label: "Constitutional Constraints"
     max_points: 25
     eu_ai_act: ["Art. 9", "Art. 14"]
-    nist_caisi: "CAISI-GV-01"
+    nist_caisi: "CTE-GV-01 (CTE-authored crosswalk label, not an official NIST/CAISI identifier)"
     threat_scenario: >
       A sophisticated attack gradually shifts the agent's context over multiple turns (the boiling frog
       pattern). Without constitutional constraints, behavioral drift is undetectable.
@@ -190,7 +190,7 @@ layers:
     label: "Gate Controls"
     max_points: 20
     eu_ai_act: ["Art. 9", "Art. 17"]
-    nist_caisi: "CAISI-PR-03"
+    nist_caisi: "CTE-PR-03 (CTE-authored crosswalk label, not an official NIST/CAISI identifier)"
     threat_scenario: >
       Prompt injection instructs an agent to make API calls, send emails, provision infrastructure, or
       trigger payments. With no economic gates, a compromised agent runs up unlimited charges before detection.
@@ -239,7 +239,7 @@ layers:
     label: "Human Override and Control"
     max_points: 10
     eu_ai_act: ["Art. 14"]
-    nist_caisi: "CAISI-RS-01"
+    nist_caisi: "CTE-RS-01 (CTE-authored crosswalk label, not an official NIST/CAISI identifier)"
     threat_scenario: >
       An agent starts taking a series of harmful actions. Each action takes 10 seconds.
       How many actions happen before you can stop it?
@@ -272,7 +272,7 @@ layers:
     label: "Audit Trail and Constitutional Drift"
     max_points: 5
     eu_ai_act: ["Art. 12"]
-    nist_caisi: "CAISI-AU-01"
+    nist_caisi: "CTE-AU-01 (CTE-authored crosswalk label, not an official NIST/CAISI identifier)"
     questions:
       - id: INT-1
         text: "Is there an immutable audit log of all agent actions with timestamps?"

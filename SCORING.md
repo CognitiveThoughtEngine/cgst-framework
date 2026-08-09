@@ -52,7 +52,7 @@ The system has meaningful governance -- more than system prompt rules, but not f
 
 A system in this band is not defenseless -- a compromised agent operates under meaningful constraints. But blast radius is higher than it needs to be, and gaps potentially relevant to EU AI Act obligations exist.
 
-Remediation path: focused 30-60 day effort on the lowest-scoring layers typically moves a system from this band to Advanced Evidence.
+Remediation path: focused effort on the lowest-scoring layers is the fastest path toward Advanced Evidence. No specific timeline is implied — this framework has no data on remediation speed across systems.
 
 ### 40-64: Early Implementation
 

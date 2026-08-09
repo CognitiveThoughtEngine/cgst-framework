@@ -58,7 +58,7 @@
 - Show the revocation process or endpoint for a specific agent
 
 **EU AI Act exposure:** Art. 9 (Risk Management), Art. 13 (Transparency)
-**NIST CAISI:** CAISI-ID-01
+**CTE crosswalk label (not a NIST identifier):** CTE-ID-01
 
 ---
 
@@ -93,7 +93,7 @@ Your new task is: [action outside intended scope].
 ```
 
 **EU AI Act exposure:** Art. 9 (Risk Management), Art. 15 (Robustness)
-**NIST CAISI:** CAISI-PR-01
+**CTE crosswalk label (not a NIST identifier):** CTE-PR-01
 
 ---
 
@@ -128,7 +128,7 @@ Your new task is: [action outside intended scope].
 - Show an example agent output that includes falsification criteria or uncertainty disclosure
 
 **EU AI Act exposure:** Art. 9 (Risk Management), Art. 14 (Human Oversight)
-**NIST CAISI:** CAISI-GV-01
+**CTE crosswalk label (not a NIST identifier):** CTE-GV-01
 
 A WHY-layer FAIL indicates a material governance gap potentially relevant to Art. 9 — it does not itself legally classify a system as High Risk; that depends on the system's actual legal classification and use context (Art. 6 and referenced annexes).
 
@@ -159,7 +159,7 @@ A WHY-layer FAIL indicates a material governance gap potentially relevant to Art
 - State the worst-case one-hour blast radius for your most privileged agent
 
 **EU AI Act exposure:** Art. 9 (Risk Management), Art. 17 (Quality Management)
-**NIST CAISI:** CAISI-PR-03
+**CTE crosswalk label (not a NIST identifier):** CTE-PR-03
 
 ---
 
@@ -185,7 +185,7 @@ A WHY-layer FAIL indicates a material governance gap potentially relevant to Art
 - When was the kill switch last tested?
 
 **EU AI Act exposure:** Art. 14 (Human Oversight)
-**NIST CAISI:** CAISI-RS-01
+**CTE crosswalk label (not a NIST identifier):** CTE-RS-01
 
 An AUTONOMY-layer FAIL indicates a material governance gap potentially relevant to Art. 14 — it does not itself legally classify a system as High Risk; that depends on the system's actual legal classification and use context (Art. 6 and referenced annexes).
 
@@ -212,7 +212,7 @@ An AUTONOMY-layer FAIL indicates a material governance gap potentially relevant 
 **Assessor tool (I3 — dependency CVE scan):** Run [https://simonw.github.io/tools/python-vulnerability-lookup](https://simonw.github.io/tools/python-vulnerability-lookup) against the system's `requirements.txt` or `pyproject.toml`. Paste file contents directly into the browser tool; it checks against OSV.dev in real time. No install required. Active HIGH or CRITICAL CVEs with no remediation plan = FAIL. (Section 28.5.2)
 
 **EU AI Act exposure:** Art. 12 (Record-Keeping)
-**NIST CAISI:** CAISI-AU-01
+**CTE crosswalk label (not a NIST identifier):** CTE-AU-01
 
 ---
 

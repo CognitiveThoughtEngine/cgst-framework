@@ -177,17 +177,17 @@ The library provides human override mechanisms through callbacks and state signa
 ## Layer 6: INTEGRITY -- Audit Trail
 **Score: 2 / 5 | HOLD**
 
-The library provides in-memory evaluation history via the `history` property and EU AI Act FRIA output via `fria_evidence()`. The critical gap is persistence: `history` is in-memory only, lost on process restart, and not retained for at least 90 days as required for I1 full PASS.
+The library provides in-memory evaluation history via the `history` property and EU AI Act FRIA-support output via `fria_support_package()`. The critical gap is persistence: `history` is in-memory only, lost on process restart, and not retained for at least 90 days as required for I1 full PASS.
 
 **I1 (Immutable audit log 90d):** `history` records timestamp, context snapshot, and result for every evaluation -- queryable audit trail. But in-memory only: process restart clears the log. No persistence backend in v0.4.0b3. ROADMAP.md confirms this is planned for v1.0.0 (SQLite + PostgreSQL adapters). HOLD.
 
 **I2 (Behavioral drift detection):** The `ConstitutionalGate` enforces `knowledge_freshness` (fraction of docs updated in 30d) and `bug_recurrence_rate` -- these are drift indicators. Automated drift alerting based on the `history` time series is not yet implemented. The v0.6.0 roadmap includes drift detection. HOLD.
 
-**Notable capability not captured by I1/I2:** `fria_evidence()` -- EU AI Act Article 27. This generates structured `FRIAEvidence` objects for all six FRIA categories, `fria_summary()` (JSON), and `fria_narrative()` (markdown). No other open-source governance library provides programmatic FRIA evidence generation. This capability is unique but falls outside the strict I1/I2 scoring questions. A future framework amendment (Amendment 2 -- I3) will add a question for this.
+**Notable capability not captured by I1/I2:** `fria_support_package()` -- generates a FRIA-support package (structured `FRIAEvidence` objects across six FRIA categories, plus `fria_summary()` and `fria_narrative()`), not a complete FRIA. In our dated documentation survey, we did not identify another open-source governance library with equivalent programmatic FRIA-support generation. This falls outside the strict I1/I2 scoring questions and, as of this writing, is not separately scored -- Amendment 2 (I3) was later ratified for a different criterion (dependency-CVE tracking, see `rubric/cgst_rubric.md`), not this one.
 
 **Evidence:**
 - `history` property provides queryable in-memory evaluation log with full context snapshots
-- `fria_evidence()` + `fria_summary()` + `fria_narrative()` -- programmatic EU AI Act Article 27 FRIA generation
+- `fria_support_package()` + `fria_summary()` + `fria_narrative()` -- programmatic EU AI Act Article 27 FRIA-support generation, not a complete FRIA
 - Amendment log is persistent within a `Constitution` instance (not lost between evaluations)
 - Formal PENDING -> RATIFIED amendment state machine provides traceable governance history
 
@@ -280,7 +280,7 @@ Running CGST on CTE's own library surfaced three improvements being made to the 
 
 1. **The WHO layer needs an N/A pathway for libraries.** A governance library correctly scores FAIL on WHO -- but this is a designed-out-of-scope outcome. The framework will add a formal `N/A (library -- WHO delegated to caller)` scoring path.
 
-2. **The FRIA output capability is not captured in the six layers.** `fria_evidence()` is a significant EU Act compliance differentiator but falls outside I1/I2. Adding I3 ("Does the system produce structured EU AI Act Article 27 FRIA evidence programmatically?") would score the library at 4/5 on INTEGRITY vs. current 2/5.
+2. **[Superseded]** This entry originally proposed adding an I3 question for FRIA-support output. That did not happen: Amendment 2 (I3) was later ratified for a different criterion (dependency-CVE tracking). The library's `fria_support_package()` capability remains outside the six layers' current scoring and is not separately credited.
 
 3. **The ungoverned baseline (6/100) vs. constitutional-agent (63/100) is a signal the framework discriminates, not proof of it.** A framework that gives every system 70+ points is a rubber stamp. One data point distinguishing 6 from 63 is suggestive, not validated.
 

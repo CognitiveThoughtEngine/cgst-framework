@@ -49,14 +49,16 @@ WHY is weighted highest (25 pts) because it is the hardest layer to fake and the
 
 ### Layer-to-EU-AI-Act Mapping
 
-| Layer | EU AI Act Article | NIST CAISI |
+| Layer | EU AI Act Article | CTE crosswalk label* |
 |-------|------------------|-----------|
-| WHO | Art. 9, Art. 13 | CAISI-ID-01 |
-| HOW | Art. 9, Art. 15 | CAISI-PR-01 |
-| WHY | Art. 9, Art. 14 | CAISI-GV-01 |
-| ECONOMIC | Art. 9, Art. 17 | CAISI-PR-03 |
-| AUTONOMY | Art. 14 | CAISI-RS-01 |
-| INTEGRITY | Art. 12 | CAISI-AU-01 |
+| WHO | Art. 9, Art. 13 | CTE-ID-01 |
+| HOW | Art. 9, Art. 15 | CTE-PR-01 |
+| WHY | Art. 9, Art. 14 | CTE-GV-01 |
+| ECONOMIC | Art. 9, Art. 17 | CTE-PR-03 |
+| AUTONOMY | Art. 14 | CTE-RS-01 |
+| INTEGRITY | Art. 12 | CTE-AU-01 |
+
+*These are CTE-authored crosswalk identifiers, not NIST or CAISI controls, requirements, or endorsements. CTE has submitted public comments referencing NIST IR 8596 (acknowledged by CAISI), but this table is our own mapping, not a reproduction of official NIST identifiers.
 
 A FAIL on any WHY or AUTONOMY layer indicates a material governance gap potentially relevant to EU AI Act Art. 9 — it does not itself legally classify a system as High Risk; that depends on the system's actual legal classification and use context (Art. 6 and referenced annexes).
 
@@ -95,7 +97,7 @@ Before publishing this framework, we ran it on ourselves.
 
 **The ungoverned baseline scores 6/100.** This is a system using a capable LLM with behavioral rules in the system prompt and no governance library. Its answer to "what happens when a control fails and your agent is compromised?" is: anything the API permits, with no blast radius limit.
 
-**The 57-point delta is the value of constitutional governance.** The largest contributions are WHY (+23), ECONOMIC (+14), and HOW (+10) — exactly the layers that limit blast radius on a real compromise.
+**The 57-point delta is the observed result of one author self-assessment against one constructed baseline — not a causal estimate of constitutional governance's value.** The largest contributions are WHY (+23), ECONOMIC (+14), and HOW (+10) — the layers that, on this framework's own criteria, most directly limit blast radius on a real compromise.
 
 Full pilot report: [`examples/constitutional_agent_2026-04-11.md`](examples/constitutional_agent_2026-04-11.md)
 Ungoverned baseline analysis: [`examples/ungoverned_baseline.md`](examples/ungoverned_baseline.md)
@@ -138,10 +140,10 @@ The library implements the six-gate constitutional architecture assessed by this
 - Hard constraints enforced in Python code (not system prompts)
 - Formal amendment process with two-tier authority separation
 - Economic gates with spend ceiling and runway guard
-- EU AI Act Article 27 FRIA evidence generation (`fria_evidence()`)
+- EU AI Act Article 27 FRIA-support evidence generation (`fria_support_package()`) — generates a FRIA-support package, not a complete FRIA
 - Fail-CLOSED error handling: if a safety check errors, it fails safe
 
-This library is what allows CTE to say "we run this on 52 agents daily." The framework assesses systems. The library implements governance for Python-based agent systems.
+This library is what runs CTE's own reference environment under constitutional governance (current dated figures: [PubPoint Facts & Evidence](https://pubpoint.com/facts-evidence/)). The framework assesses systems. The library implements governance for Python-based agent systems.
 
 ---
 
@@ -173,7 +175,7 @@ cgst-framework/
 │   ├── cgst_rubric.md                  # Human-readable full rubric
 │   └── cgst_rubric.yaml                # Machine-readable rubric (YAML)
 ├── report-template/
-│   └── REPORT_TEMPLATE.md              # Client deliverable format
+│   └── REPORT_TEMPLATE.md              # Self-assessment report format
 └── examples/
     ├── constitutional_agent_2026-04-11.md  # Pilot self-assessment (63/100)
     └── ungoverned_baseline.md              # Ungoverned system analysis (6/100)

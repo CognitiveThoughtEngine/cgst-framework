@@ -209,7 +209,7 @@ The library implements the six-layer governance architecture assessed by this fr
 - WHY layer: Hard constraints (HC-1 through HC-12) with fail-CLOSED error handling
 - ECONOMIC layer: EconomicGate with spend ceiling, runway guard, pre/post revenue dual-mode
 - AUTONOMY layer: on_evaluate callback -- wiring point for system-wide halt
-- INTEGRITY layer: history property + fria_evidence() -- EU AI Act Article 27 FRIA generation
+- INTEGRITY layer: history property + fria_support_package() -- EU AI Act Article 27 FRIA-support generation, not a complete FRIA
 
 Research: Paper 4 "Constitutional Agent Harness" -- Zenodo 10.5281/zenodo.19343034
 
